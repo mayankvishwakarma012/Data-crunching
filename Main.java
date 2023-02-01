@@ -55,9 +55,9 @@ public class Main {
                 System.out.println("Error : " + e.getMessage());
             }
 
-        try{    
             //write data arrylist to output file 
-                FileWriter fw = new FileWriter("output.tsv");
+        try (FileWriter fw = new FileWriter("output.tsv"))
+            {
                 for (String[] d : data) 
                 {
                     //System.out.print(String.join("\t", d) + System.lineSeparator()); 
