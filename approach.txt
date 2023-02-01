@@ -1,10 +1,10 @@
-Tere is my approach to solve data crunching programming challenge 
+There is my approach to solve data crunching programming challenge 
 
-1. at first step i read user email file using buffer reader and stored all tokens of it into arraylist named data.
-2. then i read ip file and traverse the data arraylist and check if the id is matching or not if it match than store ip in ip column.
-3. then read plain 32m file and checking that the email is matching with data arraylist if it match than store hash password in password column.
+1. at first step i read user email file using buffer reader and stored all tokens of it plus two extra column for ip and email with null values into arraylist named data.
+2. then i read ip file and traverse the data arraylist and check if the id is matching or not if it match than store ip in ip column which previously is null.
+3. then read plain 32m file and checking that the email is matching with data arraylist if it match than store hash password in password column which previously is null.
 4. then write it to output file.
 
 There is a bug in this code and i am unable to solve it.
-at stage 4 when i am printing output in consol, it is printing result but when i try to write it is not writing anything in file.  
-and i try this code with by creating sample file instead of the given file becouse my pc is unable to fetch the file. 
+I try this code with by creating sample file instead of the given file becouse my pc is unable to fetch the file. 
+it is not optimize approach hence it may not work for the huge file.
