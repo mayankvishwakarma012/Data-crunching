@@ -64,8 +64,8 @@ public class Main {
             {
                 for (String[] d : data) 
                 {
-                    System.out.print(String.join("\t", d) + System.lineSeparator()); 
-                    //fw.write(String.join("\t", d) + System.lineSeparator());
+                    //System.out.print(String.join("\t", d) + System.lineSeparator()); 
+                    fw.write(String.join("\t", d) + System.lineSeparator());
 
                 }
             } catch (IOException e) {
