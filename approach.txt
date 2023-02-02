@@ -6,5 +6,4 @@ There is my approach to solve data crunching programming challenge
 4. then write it to output file.
 
 There is a bug in this code and i am unable to solve it.
-I try this code with by creating sample file instead of the given file becouse my pc is unable to fetch the file. 
-it is not optimize approach hence it may not work for the huge file.
+I try this code with by creating sample file instead of the given file becouse my pc is unable to fetch the file.
