@@ -5,12 +5,13 @@ public class Main {
     public static void main (String args[])
     {
         ArrayList<String[]> data = new ArrayList<>();
-
+        data.add(new String[] {"ID", "USERNAME", "EMAIL", "PASSWORD", "HASH_PASSWORD", "IP_ADDRESS"});
 
         try{    
                 //reading user_email_hash file 
                 BufferedReader br1 = new BufferedReader(new FileReader("user_email_hash.1m.tsv"));
                 String line1;
+                br1.readLine();
                 while ((line1 = br1.readLine()) != null)   
                 {
                     String[] token = line1.split("\t");
@@ -20,6 +21,7 @@ public class Main {
                 //reading Ip file and compairing id 
                 BufferedReader br2 = new BufferedReader(new FileReader("ip_1m.tsv"));
                 String line2;
+                br2.readLine();
                 while ((line2 = br2.readLine()) != null)   
                 {
                     String[] token = line2.split("\t");
@@ -41,8 +43,10 @@ public class Main {
                     String[] token = line3.split("\t");
                     for (String[] s : data)
                     {
+                        
                         if(s[2].equals(token[0]))
                         {
+                            //System.out.println(s[2] +"======\n" +token[0]);
                             s[4] = token[1];
                             break;
                         }
@@ -60,8 +64,8 @@ public class Main {
             {
                 for (String[] d : data) 
                 {
-                    //System.out.print(String.join("\t", d) + System.lineSeparator()); 
-                    fw.write(String.join("\t", d) + System.lineSeparator());
+                    System.out.print(String.join("\t", d) + System.lineSeparator()); 
+                    //fw.write(String.join("\t", d) + System.lineSeparator());
 
                 }
             } catch (IOException e) {
